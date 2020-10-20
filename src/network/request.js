@@ -4,7 +4,7 @@ import axios from 'axios'
 export function request(config){
 	// 1.创建axios的实例
 	const instance = axios.create({
-		baseURL:'http://152.136.185.210:8000/api/w6',
+		baseURL:'',
 		timeout:5000
 	});
 	// 2.axios的拦截器
