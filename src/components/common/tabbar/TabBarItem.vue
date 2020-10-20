@@ -15,7 +15,7 @@
 			path:String,
 			activeColor:{
 				type:String,
-				default:"#d81e06"
+				default:"#FF5777"
 			}
 		},
 		methods:{
