@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <main-tab-bar></main-tab-bar>
-		<router-view></router-view>
+    <main-tab-bar class="main-tab-bar"></main-tab-bar>
+		<keep-alive exclude="Detail">
+			<router-view/>
+		</keep-alive>
   </div>
 </template>
 
@@ -17,4 +19,8 @@
 
 <style>
 	@import "./assets/css/base.css";
+	.main-tab-bar{
+		z-index:10;
+		position: relative;
+	}
 </style>

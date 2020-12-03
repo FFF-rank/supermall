@@ -1,20 +1,17 @@
 <template>
-	<div id="HomeSwiper">
-		<swiper :moveRatio='moveRatio'>
-			<swiper-item v-for="item in banners" >
-				<a :href="item.link">
-					<img :src="item.image">
-				</a>
-			</swiper-item>
-		</swiper>
-	</div>
+	<swiper class="detail-swiper" :moveRatio='moveRatio'>
+		<swiperItem v-for="item in banners">
+			<img :src="item">
+		</swiperItem>
+	</swiper>
 </template>
 
 <script>
 	import Swiper from "@/components/common/swiper/Swiper.vue";
 	import SwiperItem from "@/components/common/swiper/SwiperItem.vue";
+	
 	export default{
-		name:"HomeSwiper",
+		name:"DetailSwiper",
 		components:{
 			Swiper,
 			SwiperItem
@@ -36,4 +33,8 @@
 </script>
 
 <style scoped>
+	.detail-swiper{
+		height:calc((100vh - 44px - 49px) * 0.5);
+		overflow: hidden;
+	}
 </style>

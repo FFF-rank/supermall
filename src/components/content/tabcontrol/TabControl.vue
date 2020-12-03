@@ -25,7 +25,13 @@
 		methods:{
 			itemClick(index){
 				this.currentIndex=index;
+				this.$emit('tabClick',index);
 			}
+		},
+		created(){
+			this.$bus.$on('detailIndexChange',(index)=>{
+				this.currentIndex=index;
+			})
 		}
 	}
 </script>
